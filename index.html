@@ -320,16 +320,19 @@ etherpad: https://etherpad.mozilla.org/BiWpA8K7cE
   To participate in a Software Carpentry workshop, you will need
   access to the software described below. In addition, you will
   need an up-to-date web browser.
-  Once you are done installing the software listed below,
-  please go to <a href="setup/index.html">this page</a>,
-  which has instructions on how to test that everything was installed correctly.
   We maintain a list of common issues that occur during installation as a reference for instructors
   that may be useful on the
   <a href = "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+  If you are using a University computer and have any trouble getting
+  Bash, Git, a code/text editor, and Exceed On Demand installed via the
+  IT department, please get in touch so we can
+  help. Bradley Taber-Thomas also has weekly programming office hours
+  on Wednesdays, 2:30-4pm, in 267 Moore; feel free to stop by
+  if you need assistance setting up.
 </p>
 
 <div id="shell"> <!-- Start of 'shell' section. -->
-  <h3>The Bash Shell</h3>
+  <h3>#The Bash Shell</h3>
 
   <p>
     Bash is a commonly-used shell that gives you the power to do simple
@@ -369,7 +372,7 @@ etherpad: https://etherpad.mozilla.org/BiWpA8K7cE
 
 <div id='git'> <!-- Start of 'Git' section. GitHub browser compatability
            is given at https://help.github.com/articles/supported-browsers/-->
-  <h3>Git</h3>
+  <h3>#Git</h3>
 
   <p>
     Git is a version control system that lets you track who made changes
@@ -415,7 +418,7 @@ etherpad: https://etherpad.mozilla.org/BiWpA8K7cE
 </div> <!-- End of 'Git' section. -->
 
 <div id="editor"> <!-- Start of 'editor' section. -->
-  <h3>Text Editor</h3>
+  <h3>#Text Editor</h3>
 
   <p>
     When you're writing code, it's nice to have a text editor that is
@@ -474,30 +477,39 @@ etherpad: https://etherpad.mozilla.org/BiWpA8K7cE
   </div>
 </div> <!-- End of 'editor' section. -->
 
-<!--
-  Uncomment this section if you are using our virtual machine.
-
 <div id="vm">
-  <h3>Virtual Machine</h3>
+  <h3>#Matlab via Hammer</h3>
 
   <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
+    Matlab is commercial software and an expensive liscense
+    is needed to install it.
+    Thus, we will be using Matlab via a virual machine connected to
+    Hammer, one of the University's computing clusters.
+    This is a simple way to access Matlab, and will give you some
+    familiarity with using the high performance computing clusters on campus.
+    If you do not already have a Hammer account, or Exceed onDemand installed,
+    follow these instructions to set them up:
   </p>
   <ol>
     <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
+      Request an account through the Institute for CyberScience--
+      click "Individual User Account" on the left menu at the
+      <a href="http://rcc.its.psu.edu/resources/accounts/">ICS System Accounts page</a>,
+      log in, and provide the requested information.
+      Be sure to check the "Hammer" box under "ICS Linux Clusters."
+      In the computational and data requirements box enter
+      "minimal; learning to use ICS clusters."
+      Other questions can be answered individually.
     </li>
     <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
+      Follow the <a href="http://rcc.its.psu.edu/user_guides/remote_display/exceed_on_demand/">ICS instructions</a>
+      to install Exceed onDemand for your operating system.
+      The instructions also describe how to log in to Hammer in Exceed onDemand;
+      please make sure you can login <em>before</em> the workshop,
+      as it will be difficult to address login issues during the workshop.
     </li>
     <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
+      We will go over opening Matlab on Hammer during the workshop.
     </li>
   </ol>
 </div>
--->
