@@ -2,7 +2,7 @@
 layout: workshop
 root: .
 venue: Pennsylvania State University
-address: University Park, State College, PA 16801
+address: University Park, PA 16802
 country: United-States
 language: en
 latlng: 40.7961, -77.8628
@@ -14,7 +14,6 @@ instructor: ["Bradley Taber-Thomas", "Emily Davenport"]
 helper: ["TBD"]
 contact: (bct3@psu.edu)
 etherpad: https://etherpad.mozilla.org/BiWpA8K7cE
-eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 1234567890AB key for Eventbrite registration)
 ---
 <!--
   HEADER
@@ -51,12 +50,15 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   the pitch.
 -->
 <p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
+  <a href="https://www.imaging.psu.edu/">SLEIC</a> is running a
+  free two-day <a href="{{site.swc_site}}">Software Carpentry</a> bootcamp
+  at Penn State, University Park. Software Carpentry's mission
   is to help scientists and engineers get more research done in less
   time and with less pain by teaching them basic lab skills for
   scientific computing.  This hands-on workshop will cover basic
   concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
+  management, and task automation, using Unix, Matlab, and Git.
+  Participants will be encouraged to
   help one another and to apply what they have learned to their own
   research problems.
 </p>
@@ -76,7 +78,8 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  The workshop is aimed broadly at graduate students and scientists of brain,
+  cognition, and psychology.
 </p>
 
 <!--
@@ -90,6 +93,7 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 {% if page.latlng %}
 <p>
   <strong>Where:</strong>
+  Room TBD; Penn State, 
   {{page.address}}.
   Get directions with
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
@@ -109,6 +113,9 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   <a href="#setup">below</a>). They are also required to abide by
   Software Carpentry's
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  No prior programming experience is required, but
+  general computing skills and enthusiasm to learn programming will help you
+  get the most out of the workshop!
 </p>
 
 <!--
@@ -120,7 +127,7 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 -->
 <p>
   <strong>Contact</strong>:
-  Please mail
+  Please mail Bradley Taber-Thomas 
   {% if page.contact %}
     <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
   {% else %}
@@ -217,6 +224,18 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
       <li>Creating and running shell scripts</li>
       <li>Finding things</li>
       <li><a href="{{site.swc_lessons}}/ref/01-shell.html">Reference...</a></li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h3>Programming in MATLAB</h3>
+    <ul>
+      <li>Analyzing Patient Data</li>
+      <li>Writing MATLAB Scripts</li>
+      <li>Repeating With Loops</li>
+      <li>Creating Functions</li>
+      <li>Making Choicdes</li>
+      <li>Defensive programming</li>
+      <li><a href="http://swcarpentry.github.io/matlab-novice-inflammation/">Lesson notes...</a></li>
     </ul>
   </div>
   <!--
