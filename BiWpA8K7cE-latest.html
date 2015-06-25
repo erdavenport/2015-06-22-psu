@@ -1,0 +1,1093 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/BiWpA8K7cE</title>
+</head>
+<body>l<br
+/><b>Welcome to the Software Carpentry at PSU</b><br
+/>June 22-23, 2015<br
+/>Instructors: Brad Taber-Thomas and Emily Davenport<br
+/>Helpers:<br
+/>------------------------------------------------------------<br
+/><br
+/><b>Links:</b><br
+/>Bootcamp webpage: <a href="http://swcarpentry.github.io/matlab-novice-inflammation/">http://swcarpentry.github.io/matlab-novice-inflammation/</a><br
+/>Bootcamp repository: <a href="https://github.com/erdavenport/2015-06-22-psu">https://github.com/erdavenport/2015-06-22-psu</a><br
+/>Shell history: <a href="https://www.dropbox.com/s/5cywdtvhvwhj3z4/history.txt?dl=0">https://www.dropbox.com/s/5cywdtvhvwhj3z4/history.txt?dl=0</a> # This has been removed, but see Emily's terminal output below:<br
+/>Emily's terminal output: <a href="https://www.dropbox.com/s/cl9ibo20awl6j4z/shell_terminal_output.txt?dl=0">https://www.dropbox.com/s/cl9ibo20awl6j4z/shell_terminal_output.txt?dl=0</a><br
+/><br
+/>git history: <a href="https://www.dropbox.com/s/5cywdtvhvwhj3z4/history.txt?dl=0">https://www.dropbox.com/s/5cywdtvhvwhj3z4/history.txt?dl=0</a> # This has alos been moved, it is now located here:<br
+/><a href="https://www.dropbox.com/s/c94htqqgs4se5hu/git_history.txt?dl=0">https://www.dropbox.com/s/c94htqqgs4se5hu/git_history.txt?dl=0</a><br
+/><br
+/><b>The plan:&nbsp;</b><br
+/>Day 1:<br
+/><ul><li>Shell</li
+><li>Break</li
+><li>More Shell</li
+><li>Lunch</li
+><li>Hammer intro by ICS</li
+><li>Break</li
+><li>Matlab</li></ul
+>Day 2:<br
+/><ul><li>More Matlab</li
+><li>Break</li
+><li>Even more Matlab</li
+><li>Lunch</li
+><li>Git</li
+><li>Break</li
+><li>More Git</li
+><li>Wrap-up<br/><br
+/></li></ul
+><b>Further reading:</b><br
+/><ul><li>Why we need SWC... <a href="http://www.americanscientist.org/issues/num2/wheres-the-real-bottleneck-in-scientific-computing/1">http://www.americanscientist.org/issues/num2/wheres-the-real-bottleneck-in-scientific-computing/1</a></li
+><li>Best practices in scientific computing slideshow... <a href="http://swcarpentry.github.io/slideshows/best-practices/index.html#slide-0">http://swcarpentry.github.io/slideshows/best-practices/index.html#slide-0</a>&nbsp;<br/><br
+/><br/><br
+/><br/><br
+/></li></ul
+><b><u>Shell:</u></b><br
+/>Set up:<br
+/><ul><li>Download files: <a href="http://swcarpentry.github.io/shell-novice/shell-novice-data.zip">http://swcarpentry.github.io/shell-novice/shell-novice-data.zip</a></li
+><li>Place files into a folder called "shell-novice" on your desktop</li
+><li>unzip file -&gt; should see a folder called "data"</li
+><li><br/></li
+><li>cd&nbsp;</li
+><li>echo Goodmorning sunshine</li
+><li>whoami (shows the user's current identity)</li
+><li>pwd (present working directory)</li
+><li>ls (list contents of folder)</li
+><li>ls -F&nbsp; (adds a / to folders; letters behind dash are flags)</li
+><li>ls -F molecules/ (lists contents of molecules folder)</li
+><li>ls -a (shows hidden files)</li
+><li>ls -lh (combine flags, l="long format, way too much info", h="human readable")</li
+><li>ls -t (list by time, last modified)</li
+><li>ls -R (list contents of directory recursively)</li
+><li>cat (display contents, also concatenate file contents)</li
+><li>nano (text editor software in the shell)</li
+><li>mkdir (make a directory)</li
+><li>rm (delete file)</li
+><li>rm -i (delete, with prompt to confirm deletion)</li
+><li>rm -r folder_name (delete files/folders recursively, that folder and everything in it)</li
+><li>mv (move or rename a file)</li
+><li>cp (make a copy of a file)</li
+><li>wc filename (give the lines, words &amp; character count for the file)</li
+><li>wc -l file_name (give just the number of lines in a file)</li
+><li>* is the wildcard character. it can be used in combination with lots of other commands e.g., mv *.pdf (move all the pdf files to a certain place).</li
+><li>sort&nbsp; (sorts files alphabetically -n flag sorts numerically</li
+><li>| allows you to concatenate commands in a single line (e.g., wc -l * | sort -n )</li
+><li>[] allow you to specify 'or' in a command e.g., cp *[AB].txt will copy all files that end in A.txt or B.txt</li
+><li>&gt; sends to a file (and will overwrite what's there if the file already exists)</li
+><li>&gt;&gt; appends to the file (adds to what's already there)</li
+><li><br/></li
+><li>Notes on naming files - try to stick with alphanumeric characters, stay away from spaces in file names, or special characters (e.g., @, $)&nbsp;</li
+><li>You can preview what your script is doing by using the echo command - which will output the commands that will run.</li
+><li><br/><br/><br
+/></li></ul
+>Lesson Notes:&nbsp;<br
+/><br
+/>References:<br
+/><br
+/><a href="http://software-carpentry.org/v5/novice/ref/01-shell.html">http://software-carpentry.org/v5/novice/ref/01-shell.html</a><br
+/><a href="http://swcarpentry.github.io/matlab-novice-inflammation/">http://swcarpentry.github.io/matlab-novice-inflammation/</a><br
+/><br
+/><br
+/>When naming files with dates use the format: YYYY/MM/DD<br
+/>but no slashes, right? &lt;--- Correct, don't use slashes in file names (because the shell will interpret those as folder names)<br
+/><br
+/>(The following code is for GitBash users only)<br
+/>To color your files in windows enter:<br
+/>cd<br
+/>ls -a<br
+/>nano .bash_profile<br
+/><br
+/>in new line enter:<br
+/>LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'<br
+/>export LS_COLORS<br
+/>alias ls='ls -F --color --show-control-chars'<br
+/>Save<br
+/>Exit text file<br
+/>Restart GitBash<br
+/><br
+/>For terminal users<br
+/>cd<br
+/>ls -a<br
+/>nano .bash_profile<br
+/>add new line with:<br
+/>alias ls='ls -F &lt;-- adds color only -FG&lt;--Adds color and folder slash<br
+/><br
+/>save and restart terminal<br
+/><br
+/><br
+/><br
+/><b><u>Matlab</u></b><br
+/>Go to the bootcamp webpage in Hammer: <a href="http://erdavenport.github.io/2015-06-22-psu/">http://erdavenport.github.io/2015-06-22-psu/</a><br
+/>Under the Matlab section you'll see a link to the data: <a href="http://erdavenport.github.io/2015-06-22-psu/matlab_data.zip">http://erdavenport.github.io/2015-06-22-psu/matlab_data.zip</a><br
+/>Save that into your home folder (if you're downloading it via firefox, it'll automatically download into your "Downloads" folder. In your terminal, cd to your home directory, then "mv Downloads/matlab_data.zip ~") &lt;- relative path!! shell makes an entrance into our matlab lesson<br
+/><br
+/>Open a terminal.&nbsp;<br
+/>cd work<br
+/>ls<br
+/>mkdir swc_workshop<br
+/>cd swc_workshop<br
+/>ls<br
+/>cd ../..<br
+/>ls<br
+/><br
+/>Is your data file there? If not, move it to your home directory.&nbsp;<br
+/>Make sure you're in the same directory, then unzip:<br
+/><br
+/>unztip matlab_data.zip<br
+/><br
+/>If you see a matlab_data folder now, you're good to go.&nbsp;<br
+/>Challenge! Move the matlab_folder into the swc_workshop folder (which is in the work directory)<br
+/>rm matlab_data.zip&nbsp; # (we don't need it anymore)<br
+/>cd work/swc_workshop<br
+/><br
+/>Load a module:<br
+/>module avail<br
+/>module avail matlab<br
+/>module load matlab<br
+/>module list<br
+/><br
+/>Each time you open a new terminal window, you'll need to load matlab.<br
+/><br
+/>Why matlab??<br
+/>- Operates on large matricies well<br
+/>- Default for neuroscience and other fields for both data collection and presentations<br
+/>- Drawbacks: $$$$&nbsp;<br
+/><br
+/>matlab<br
+/>(matlab should've openned up)<br
+/><br
+/>Go to Desktop in the menu bar and uncheck everything but "Command window"<br
+/>question mark button up at the top will open up the documentation/help files (or go to "Help" on the menu -&gt; "Product Help"<br
+/><br
+/>Go back to the terminal window. Let's glance through the data we're going to work with.&nbsp;<br
+/>matlab<br
+/><br
+/>We'll need to open a new terminal tab to actually navigate around the shell.&nbsp;<br
+/>cd matlab_data<br
+/>ls<br
+/>(should see inflammation files)<br
+/>Each row is a subject, each column is a different timepoint<br
+/>head inflammation-01.csv<br
+/>(should see a bunch of numbers, comma separated)<br
+/><br
+/>Go to that other tab that is matlab, we're going to read in the files.&nbsp;<br
+/>Challenge! Go through the help documentation and try to find a function that will read files that are comma separated?<br
+/>Let's use csvread(filename), where filename is the name of the file we want to read into matlab<br
+/>In the matlab command window:<br
+/>Go to File -&gt; Set Path -&gt; Add with Subfolders -&gt; (add the path to the swc_workshop folder)<br
+/>You should see it add two paths to that list of paths. Close out (don't need to save for the future)<br
+/><br
+/>Let's load one of our files:<br
+/>csvread('inflammation-01.csv')<br
+/>Should see a bit matrix into your screen, however, that isn't saved into matlab.<br
+/>clc<br
+/>clc will clear the screen of all the numbers (make it nice and pretty)<br
+/><br
+/>csvread is a <b>function</b><br
+/>functions take <b>parameters</b> (in our case, the file name)<br
+/><br
+/>Let's save the data into matlab so that we can work with it in the program:<br
+/>patient_data = csvread('inflammation-01.csv');<br
+/>The semi-colon suppresses any output to the screen. Allows you to run things without a ton of numbers being printed to the screen. Use the semi-colon!<br
+/><br
+/>Now, the variable 'patient_data' containts the contents of the array. DISPlay the variable<br
+/>disp(patient_data)<br
+/><br
+/>Variables:<br
+/>- must start with a LETTER, but can contain numbers and underscores.<br
+/><br
+/>weight_kg = 55;<br
+/><br
+/>Go up to Desktop, click on workspace. This will show you what variables you have stored in your current matlab session.<br
+/><br
+/>weight_lb = 2.2*weight_kg;<br
+/><br
+/>disp(['Weight in pounds: ', num2str(weight_lb)]);<br
+/>num2str(weight_lb)<br
+/>weight_lb<br
+/><br
+/>Variables:<br
+/>- Variables in programming are just like variables in math class<br
+/>- In math, you can assign any number to x in an equation (y = mx +b, for instance, for the slope of a line) to get an answer (say slope is 2 and intercept is 1: y = 2x + 1), You can enter any number for x and get y.<br
+/><br
+/>disp(['Weight in pounds: ', num2str(weight_lb)]);<br
+/>Challenge! Change the previous command to say 'Weight in kg' and then list out weight in kg<br
+/>disp(['Weight in kg" ', num2str(weight_kg)]);<br
+/>weight_kg = 100<br
+/>disp(['Weight in kg" ', num2str(weight_lb)]);<br
+/>Ooops, haven't updated the weight_lb variable! Let's rerun that:<br
+/>weight_lb = 2.2 * weight_kg;<br
+/>disp(['Weight in kg" ', num2str(weight_lb)]);<br
+/>Yay! It's updated!<br
+/><br
+/>who<br
+/>This lists what variables you have in the workspace<br
+/>We don't need the weight variables, so let's get rid of those:<br
+/>clear weight_lb<br
+/>clear weight_kg<br
+/><br
+/>The ans variable always is there. It always holds the output of the last command you've run<br
+/>ans gets overwritten every time you run a new command.<br
+/><br
+/>clear all (would get rid of everything, but let's not do that!)<br
+/><br
+/>Exercise! <a href="http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html">http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html</a> 1/4 the way down the page, do the Predicting Variable Values Challenge (it's green)<br
+/>Answers:<br
+/>mass = 95<br
+/>age = 102<br
+/><br
+/>clear age mass<br
+/>who<br
+/>whos<br
+/>whos will tell you a bit more info than who (size of files, the class of the variable, etc)<br
+/><br
+/>How much data do we have?<br
+/>size(patient_data)<br
+/>This displays 60 40 (these are rows and columns - always in that order!)<br
+/><br
+/>All data in matlab is stored as an array. If you have a list of numbers (1,2,3,4), that's a 1 dimensional array called a vector.&nbsp;<br
+/><br
+/>class(patient_data)<br
+/>class tells us what the data type is. patient_data is a number that's allowed to have decimal points. If there aren't decimal points, you can make an integer (whole numbers). If you create an integer with decimals, it will round and store it just as the nearest whole number.&nbsp;<br
+/><br
+/>Sometimes we might want to make a toy dataset to play with:<br
+/>magic(8)<br
+/><br
+/>This created an 8x8 array where all of the columns, rows, and diagonal add up to the same thing.&nbsp;<br
+/><br
+/>Indexing:<br
+/><br
+/>- What if we want just part of an array?<br
+/>M(5,6)<br
+/>This will have us grab the 5th row, 6th column data point.&nbsp;<br
+/><br
+/>- What if we want all of row 5?<br
+/>M(5,:)<br
+/>The colon tells matlab to grab all of the columns<br
+/>&nbsp;<br
+/>&nbsp;- What about all of column 6?<br
+/>&nbsp;M(:,6)<br
+/>&nbsp;<br
+/>&nbsp;- What about rows 1 - 4 and everything in between?<br
+/>&nbsp;M(1:4)<br
+/>&nbsp;Ooops, what columns do we need?<br
+/>&nbsp;M(1:4, :)<br
+/>&nbsp;This gives us rows 1-4 and all columns.&nbsp;<br
+/><br
+/>- What if you want all rows, and then every column after the 6th column?<br
+/>M(:, 6:end)<br
+/>The end designates the last column&nbsp;<br
+/><br
+/>- What if we want to skip rows?<br
+/>M(2:3:end, :)<br
+/>We're starting at the 2nd row, taking every 3rd row, until the last row)<br
+/><br
+/>- What about skipping rows and columns?<br
+/>m(2:3:end, 2:2:end)<br
+/><br
+/>We can "slice" with numbers, but we can also slice with characters (or text)<br
+/>element = 'oxygen';<br
+/><br
+/>Challenge! "Slicing" green box on this page: <a href="http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html">http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html</a><br
+/>Answers:<br
+/>1. gen, oye, xyge<br
+/>2. element(:): You're telling it to return every element of the array. Each are put on their own line. Showing the contents of a variable is not the same as indexing into a variable.&nbsp;<br
+/><br
+/>Back from coffee break.&nbsp;<br
+/>We're about 2/3 through the lesson if you're following along.&nbsp;<br
+/><a href="http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html">http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html</a><br
+/><br
+/>Let's start analyzing the patient data. Let's find the average of all the datapoints in the data set:<br
+/>mean(patient_data(:));<br
+/><br
+/>Neat tip: if you put your curser next to parenthases, an underline will show up under the matching paranthasis&nbsp;<br
+/>mean(patient_data)&nbsp;<br
+/>Will give you the mean of each column of the data<br
+/><br
+/>Display the maxiumum data point;<br
+/>disp(['Max inflammation: ', num2str(max(patient_data(:)))])<br
+/><br
+/>Display the minimum data point:<br
+/>disp(['Max inflammation: ', num2str(min(patient_data(:)))])<br
+/><br
+/>Display the standard deviation of all the points:<br
+/>disp(['Max inflammation: ', num2str(std(patient_data(:)))])<br
+/><br
+/>Open up the command history tab, highlight the last thre disps<br
+/>Mac - Function F9<br
+/>PC - F9<br
+/><br
+/>Let's pull all data for patient 1<br
+/>patient_1 = patient_data(1, :);<br
+/>disp('["Max inflammation: ', nu2str(max(patient_1))])<br
+/>max(patient_data(1,:))<br
+/><br
+/>What if we want the meae mean for all subjects?<br
+/>mean(patient_data, 1)<br
+/>We are passing two parameters here: the first is the data the second stands for dimension (1 means columns, 2 means rows)<br
+/><br
+/>What's the size of the data that was output by the last command above?<br
+/>size(mean(patient_data, 1))<br
+/><br
+/>One thing matlab is really good at is visualizing data.&nbsp;<br
+/>imagesc(patient_data)<br
+/>This takes a matrix, and shows it to you in color (so you see the higher values have a different color than the lower values)<br
+/><br
+/>Let's calculate the means at each time point and plot that:<br
+/>ave_inflammation = mean(patient_data, 1);<br
+/>plot(ave_inflammation)<br
+/>disp(ave_inflammation)<br
+/>plot(max(patient_data, [], 1));<br
+/><br
+/>Why the extra bracket [] on that max function? Max had a functionality were if you give it two equally sized arrays, i'll output a new array where for each element it will return the max value out of the two original arrays.&nbsp;<br
+/><br
+/>Challenge1e! The green Plots box on this page: <a href="http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html">http://swcarpentry.github.io/matlab-novice-inflammation/01-intro.html</a><br
+/>Answers:<br
+/>1. There is no patient 0 or day 0. The lines are slightly slanted because they're jumping from day to day.<br
+/>2. plot(std(pateint_data, 1));<br
+/><br
+/>How can we do 2 plots side by side?<br
+/>subplot(1, 2, 1)<br
+/>subplot sets up the plotting space, but doesn't actually plot anything<br
+/>plot(max(patient_data, [], 1));<br
+/>subplot(1, 2, 2)<br
+/>plot(min(patient_data, [], 1));<br
+/>subplot(2,2,1)<br
+/>The first two parameters of subplot stands for the number of rows and the number of columns of plots<br
+/><br
+/>If you're following along with the notes, we're now going to make scripts:<br
+/><a href="http://swcarpentry.github.io/matlab-novice-inflammation/02-scripts.html">http://swcarpentry.github.io/matlab-novice-inflammation/02-scripts.html</a><br
+/><br
+/>Go to Desktop in the top bar and editor. The scripts you save have a .m extension, but they're just text files.&nbsp;<br
+/>Click the little page in the upper left corner to open up a new script.&nbsp;<br
+/>% signifies that the text following it is just a comment. Matlab will ignore anything you write after that.<br
+/>Comment your code a lot!! Future you will forget what you were trying to do.&nbsp;<br
+/>Some comments to consider putting at the top of your script:<br
+/><br
+/>note: use rm to remove folders in MATLAB on Hammer --&gt; goes to home file when you just delete using the 'Desktop' Tab, but it's hidden and takes up unnecessary space<br
+/><br
+/><br
+/><br
+/>%%%%%%%%%%%% This should all be in your script %%%%%%%%%%%%<br
+/>% script analyze.m for inflammation patient data<br
+/>% bct3 wrote this script&nbsp;<br
+/>patient_data = csvread('inflammation-01.csv');<br
+/>disp(['Analyzing inflammation-01.csv:'])<br
+/>disp(['Max inflammation: ', num2str(max(patient_data(:)))])<br
+/>disp(['Min inflammation: ', num2str(min(patient_data(:)))])<br
+/>disp(['Standard Deviation inflammation: ', num2str(std(patient_data(:)))])<br
+/><br
+/>ave_inflammation = mean(patient_data, 1);<br
+/>plot(ave_inflammation)<br
+/>ylabel('average')<br
+/><br
+/>print -dpng 'average.png'<br
+/><br
+/>subplot(1,2,1)<br
+/>plot(max(patient_data, [], 1));<br
+/>ylabel('max')<br
+/><br
+/>subplot(1,2,2)<br
+/>plot(min(patient_data, [], 1));<br
+/>ylabel('min')<br
+/><br
+/>print -dpng 'pateint_data-01.png'<br
+/>%%%%%%%%%%%% End of what is in script %%%%%%%%%%%%%%%%%%<br
+/><br
+/><br
+/><b><u>Matlab (Day 2)</u></b><br
+/>Loops: <a href="http://swcarpentry.github.io/matlab-novice-inflammation/03-loops.html">http://swcarpentry.github.io/matlab-novice-inflammation/03-loops.html</a><br
+/><br
+/>Open a terminal<br
+/>mmlsquota<br
+/>This function will tell you your memory quotas for different spaces on the cluster.&nbsp;<br
+/>2 numbers to pay attention to are the "size" and the "limit". If your size is getting close to the limit, you may start to have problems running matlab.<br
+/><br
+/>Go to Applications (top left), Accessories, right click on terminal and it'll add the launcher to desktop.&nbsp;<br
+/><br
+/>Right click on the terminal icon, go to Properties, go to the Launcher tab. Under command it should say gnome-terminal ~working-directory=work/swc_workshop<br
+/><br
+/>You can set up multiple terminal launchers with different paths (if you're working on multiple projects)<br
+/><br
+/>In the terminal, load the module load&nbsp;<br
+/>Then type matlab to open up matlab<br
+/>It should open up to the script that you were making anyway.&nbsp;<br
+/><br
+/>Make sure to add the data folder to the path<br
+/>Try running the first line of the script:<br
+/>patient_data = csvread('inflammation-01.csv');<br
+/><br
+/>whos<br
+/>Make sure the patient_data variable is in there<br
+/><br
+/>clear all<br
+/><br
+/>Run the whole script.&nbsp;<br
+/>analyze<br
+/><br
+/>You should get output that displays file name, max, min, sd, and the figure<br
+/><br
+/>We're going to make a change to the script: We only want it to output one figure rather than two figures.&nbsp;<br
+/>%%%%%%%%%%%% This should all be in your script %%%%%%%%%%%%<br
+/>% script analyze.m for inflammation patient data<br
+/>% bct3 wrote this script&nbsp;<br
+/>patient_data = csvread('inflammation-01.csv');<br
+/>disp(['Analyzing inflammation-01.csv:'])<br
+/>disp(['Max inflammation: ', num2str(max(patient_data(:)))])<br
+/>disp(['Min inflammation: ', num2str(min(patient_data(:)))])<br
+/>disp(['Standard Deviation inflammation: ', num2str(std(patient_data(:)))])<br
+/><br
+/>subplot(1,3,1)<br
+/>ave_inflammation = mean(patient_data, 1);<br
+/>plot(ave_inflammation)<br
+/>ylabel('average')<br
+/><br
+/>subplot(1,3,2)<br
+/>plot(max(patient_data, [], 1));<br
+/>ylabel('max')<br
+/><br
+/>subplot(1,3,3)<br
+/>plot(min(patient_data, [], 1));<br
+/>ylabel('min')<br
+/><br
+/>print -dpng 'pateint_data-01.png'<br
+/>%%%%%%%%%%%% End of what is in script %%%%%%%%%%%%%%%%%%<br
+/><br
+/>That's great, but we only analyzed one data file. Let's write some loops to analyze everything.&nbsp;<br
+/><br
+/>Open a new script.&nbsp;<br
+/><br
+/>word = 'brain'<br
+/><br
+/>Let's say we wanted to print one letter at a time:<br
+/>disp(word(1))<br
+/>disp(word(2))<br
+/>disp(word(3))<br
+/><br
+/>Ugh. Boring. I'd rather automate the code so that it prints out each letter. That way, it doesn't matter how long the word is, or if we add letters to the end of the word later.&nbsp;<br
+/><br
+/>word = 'ofc'<br
+/>for letter = 1:4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; % the 1:4 just stands for 1,2,3,4<br
+/>&nbsp;&nbsp;&nbsp; disp(word(letter))&nbsp;&nbsp;&nbsp; % we use the value of letter to index (letter will equal 1,2,3,4 as the loop runs)<br
+/>end<br
+/><br
+/>Darn, this still isn't as flexible as we'd like it. If the word is only 3 letters, when it gets to the fourth iteration of the loop it gives us an error.&nbsp;<br
+/><br
+/>for letter = 1:length(word)&nbsp;&nbsp;&nbsp; % length will find the size of the variable we're looping over.&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; disp(word(letter))<br
+/>end<br
+/><br
+/>Great, by using length(), we now have a flexible loop that will adjust to the word we give it.&nbsp;<br
+/><br
+/>Sometimes we'll want to add a counter inside a loop:<br
+/><br
+/>len = 0;<br
+/>for letter = 1:length(word)<br
+/>&nbsp;&nbsp;&nbsp; len = len + 1;<br
+/>&nbsp;&nbsp;&nbsp; disp(word(letter))<br
+/>end<br
+/><br
+/>How did len get to five? Each time through the loop we added 1 to the value of len. So, for each iteration of the loop it looks like this:<br
+/>1 = 0 + 1<br
+/>2 = 1 + 1<br
+/>3 = 2 + 1<br
+/>4 = 3 + 1<br
+/>5 = 4 + 1<br
+/><br
+/>Challenge! Incrementing with loops (green box in the notes about the word aluminum).&nbsp;<br
+/>Answer:<br
+/>for letter = 1:length(word)<br
+/>&nbsp;&nbsp;&nbsp; len = len + 1;<br
+/>&nbsp;&nbsp;&nbsp; disp(word(1:len));<br
+/>end<br
+/><br
+/>Striding:<br
+/>disp(1:3:11)<br
+/><br
+/>Can go backwards too:<br
+/>disp(11:-3:1)<br
+/><br
+/>Challenge! Display the letters of 'brain' backwards, one per line.&nbsp;<br
+/>Answer:<br
+/>for letter = length(word):-1:1<br
+/>&nbsp;&nbsp;&nbsp; disp(word(letter));<br
+/>end<br
+/><br
+/>Great, we now know the basic structure of a loop in matlab. Let's open a new script and start to loop over our inflammation files:<br
+/><br
+/>for idx = 1:12<br
+/>&nbsp;&nbsp;&nbsp; file_name = sprintf('inflammation-%d.csv', idx);&nbsp;&nbsp;&nbsp; % the %d stands for a digit, that digit is the looping variable idx<br
+/>&nbsp;&nbsp;&nbsp; disp(file_name)<br
+/>end<br
+/><br
+/>Ok, that's close, but we need to pad the single digit numbers with a leading digit. We can add the '02' right before the d, which tells it that we want two digits, padded with a leading zero.&nbsp;<br
+/><br
+/>for idx = 1:12<br
+/>&nbsp;&nbsp;&nbsp; file_name = sprintf('inflammation-%02d.csv', idx);&nbsp;&nbsp;&nbsp; % the %d stands for a digit, that digit is the looping variable idx<br
+/>&nbsp;&nbsp;&nbsp; disp(file_name)<br
+/>end<br
+/><br
+/>Let's go back to our analyze.m script and update it:<br
+/>Highlight all your code in the script and hit tab. We're going to incase all of that code in a for loop:<br
+/><br
+/>%%%%%%%%%%%% This should all be in your script %%%%%%%%%%%%<br
+/>% script analyze.m for inflammation patient data<br
+/>% bct3 wrote this script&nbsp;<br
+/><br
+/>for idx = 1:12<br
+/>&nbsp;&nbsp;&nbsp; file_name = sprintf('inflammation-%02d.csv', idx);<br
+/>&nbsp;&nbsp;&nbsp; img_name = sprintf('pateint_data-%02d.png', idx);<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; patient_data = csvread(file_name);<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; disp(['Analyzing ', file_name, ':'])<br
+/>&nbsp;&nbsp;&nbsp; disp(['Max inflammation: ', num2str(max(patient_data(:)))])<br
+/>&nbsp;&nbsp;&nbsp; disp(['Min inflammation: ', num2str(min(patient_data(:)))])<br
+/>&nbsp;&nbsp;&nbsp; disp(['Standard Deviation inflammation: ', num2str(std(patient_data(:)))])<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,1)<br
+/>&nbsp;&nbsp;&nbsp; ave_inflammation = mean(patient_data, 1);<br
+/>&nbsp;&nbsp;&nbsp; plot(ave_inflammation)<br
+/>&nbsp;&nbsp;&nbsp; ylabel('average')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,2)<br
+/>&nbsp;&nbsp;&nbsp; plot(max(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('max')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,3)<br
+/>&nbsp;&nbsp;&nbsp; plot(min(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('min')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; print('-dpng', img_name)<br
+/>end<br
+/>%%%%%%%%%%%% End of what is in script %%%%%%%%%%%%%%%%%%<br
+/><br
+/>gnome-open is useful on this cluster to open up the files<br
+/><br
+/><br
+/>So, our script is pretty good, but it still isn't flexible to how many files are in the folder. What if we add more patient data? We'll need to re-write the script.&nbsp;<br
+/>Navigate to the folder where the data are stored.&nbsp;<br
+/><br
+/>We've added the files variable below. This is a new variable type: struct. It's a variable that can have other variables in it.&nbsp;<br
+/>files.name will show all of the names of the files.&nbsp;<br
+/>length(files) will show how many files we have<br
+/>strrep stands for string replace. Below, we're using it to replace '.csv' in the file name with '.png' so we can save the image with the same name as the input file.&nbsp;<br
+/><br
+/>%%%%%%%%%%%% This should all be in your script %%%%%%%%%%%%<br
+/>% script analyze.m for inflammation patient data<br
+/>% bct3 wrote this script&nbsp;<br
+/><br
+/>files = dir('inflammation*.csv');<br
+/><br
+/>for idx = 1:length(files)<br
+/>&nbsp;&nbsp;&nbsp; %file_name = sprintf('inflammation-%02d.csv', idx);<br
+/>&nbsp;&nbsp;&nbsp; file_name = files(idx).name;<br
+/>&nbsp;&nbsp; %img_name = sprintf('pateint_data-%02d.png', idx);<br
+/>&nbsp;&nbsp;&nbsp; img_name = strrep(files(idx).name, '.csv', '.png')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; patient_data = csvread(file_name);<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; disp(['Analyzing ', file_name, ':'])<br
+/>&nbsp;&nbsp;&nbsp; disp(['Max inflammation: ', num2str(max(patient_data(:)))])<br
+/>&nbsp;&nbsp;&nbsp; disp(['Min inflammation: ', num2str(min(patient_data(:)))])<br
+/>&nbsp;&nbsp;&nbsp; disp(['Standard Deviation inflammation: ', num2str(std(patient_data(:)))])<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,1)<br
+/>&nbsp;&nbsp;&nbsp; ave_inflammation = mean(patient_data, 1);<br
+/>&nbsp;&nbsp;&nbsp; plot(ave_inflammation)<br
+/>&nbsp;&nbsp;&nbsp; ylabel('average')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,2)<br
+/>&nbsp;&nbsp;&nbsp; plot(max(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('max')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,3)<br
+/>&nbsp;&nbsp;&nbsp; plot(min(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('min')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; print('-dpng', img_name)<br
+/>end<br
+/>%%%%%%%%%%%% End of what is in script %%%%%%%%%%%%%%%%%%<br
+/><br
+/><br
+/>Yay! We can loop! And we can write scripts.&nbsp;<br
+/><br
+/>We've been using built in functions in matlab, but we can write our own functions.&nbsp;<br
+/><br
+/>Navigate to the swc_workshop folder in the terminal and let's so some spring cleaning.&nbsp;<br
+/>rm patient_data*<br
+/><br
+/>Let's make some simple functions:<br
+/><br
+/>%%%%%%%%%%%% This should be in your new script %%%%%%%%%%%%%<br
+/>% file fahr_to_kelvin.m<br
+/>function ktemp = fahr_to_kelvin(ftemp)<br
+/>&nbsp;&nbsp;&nbsp; ktemp = ((ftemp - 32)*(5/9)) + 273.15;<br
+/>end<br
+/>%%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>Now run the function:<br
+/>fahr_to_kelvin(32)<br
+/><br
+/>Let's try another function:<br
+/><br
+/>%%%%%%%%%% This should be another new script %%%%%%%%%%%%%%<br
+/>% file kelvin_to_celsius.m<br
+/>function ctemp = kelvin_to_celsius(ktemp)<br
+/>&nbsp;&nbsp;&nbsp; ctemp = ktemp - 273.15;<br
+/>end<br
+/>%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>Now run that function;<br
+/>kelvin_to_celsius(0.0)<br
+/><br
+/>Let's combine a couple of the functions we already have into one last function:<br
+/><br
+/>%%%%%%%%%%%% Another separate script %%%%%%%%%%%%%%%%%<br
+/>% file fahr_to_celsius.m<br
+/>function ctemp = fahr_to_celsius(ftemp)<br
+/>&nbsp;&nbsp;&nbsp; ktemp = fahr_to_kelvin(ftemp);<br
+/>&nbsp;&nbsp;&nbsp; ctemp = kelvin_to_celsius(ktemp);<br
+/>end<br
+/>%%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>fahr_to_celsius(32)<br
+/><br
+/>Try to keep functions between 20-40 lines. Much larger than that, they become really hard to manage and typos get pretty hard to spot.&nbsp;<br
+/><br
+/>COFFEEEEE! Be back at 10:50 please.&nbsp;<br
+/><br
+/>Now that you're caffeinated, a challenge!<br
+/>Start at Concatenating in a function green box here: <a href="http://swcarpentry.github.io/matlab-novice-inflammation/04-func.html">http://swcarpentry.github.io/matlab-novice-inflammation/04-func.html</a><br
+/><br
+/>disp(['the', 'brain', 'rocks!', num2str(1)])<br
+/><br
+/>%%%%%%%%%%%%%% Function from the challenge %%%%%%%%%%%%%<br
+/>% file fence.m<br
+/>&nbsp;function output = fence(original, wrapper)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp; output = strcat(wrapper, original, wrapper);<br
+/>end<br
+/>%%%%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>%%%%%%%%%%%%%% Outer function from challenge %%%%%%%%%%%%%<br
+/>function output = outer(word)<br
+/>&nbsp;&nbsp;&nbsp; output = strcat(word(1), word(end));% now takes 1st letter of helium and last of it<br
+/>end<br
+/>%type into command window "output('helium;)<br
+/>gives you 'hm'<br
+/>%%%%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>outer('brain')<br
+/><br
+/>%%%%%%%%%%%%%% center.m script %%%%%%%%%%%%%%%%%%%%<br
+/>% file center.m<br
+/>function out = center(data, desired)<br
+/>&nbsp;&nbsp;&nbsp; out = (data - mean(data(:))) + desired;<br
+/>end<br
+/>%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>z = zeros(2,2)<br
+/>center(z, 3)<br
+/><br
+/>z = z + 1<br
+/>center(z, 3)<br
+/><br
+/>Let's try the center function on our data. Let's start with just one file, so that we know it's doing what we think it should be doing.<br
+/><br
+/><br
+/>data = csvread('inflammation-01.csv');<br
+/>centered = center(data(:), 0);<br
+/><br
+/>size(centered)<br
+/><br
+/>Let's add some help comments to our function. Put these right under your function definition. The function needs to be on line one:<br
+/>%%%%%%%%%%%%%% center.m script %%%%%%%%%%%%%%%%%%%%<br
+/>function out = center(data, desired)<br
+/>&nbsp;&nbsp;&nbsp; % Center data around desired<br
+/>&nbsp;&nbsp;&nbsp; % out = enter(data, desired)<br
+/>&nbsp;&nbsp;&nbsp; % returned "out" array of centered data<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; out = (data - mean(data(:))) + desired;<br
+/>end<br
+/>%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>Challenge! "Testing a Function" question #3 on the bottom of this page: <a href="http://swcarpentry.github.io/matlab-novice-inflammation/04-func.html">http://swcarpentry.github.io/matlab-novice-inflammation/04-func.html</a><br
+/><br
+/>%%%%%%%%%%%%%%%% Challenge script %%%%%%%%%%%%%%%%%%<br
+/>function [] = run_analysis(filename)<br
+/>&nbsp;&nbsp;&nbsp; disp(['running...', filename])<br
+/>&nbsp;&nbsp;&nbsp; patient_data = csvread(filename);<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; pause(2)<br
+/>&nbsp;&nbsp;&nbsp; close()<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; ave_inflammation = mean(patient_data, 1);<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,1)<br
+/>&nbsp;&nbsp;&nbsp; plot(ave_inflammation)<br
+/>&nbsp;&nbsp;&nbsp; ylabel('average')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,2)<br
+/>&nbsp;&nbsp;&nbsp; plot(max(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('max')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,3)<br
+/>&nbsp;&nbsp;&nbsp; plot(min(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('min')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>end<br
+/>%%%%%%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>%%%%%%%%%%%%%%% Batch analysis script %%%%%%%%%%%%%%%%%<br
+/>function [] =&nbsp; batch_analysis()<br
+/>&nbsp;&nbsp;&nbsp; files = dir('inflammation*.csv');<br
+/>&nbsp;&nbsp;&nbsp; for idx = 1:length(files)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; disp(files(idx).name);<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run_analysis(files(idx).name)<br
+/>end<br
+/>%%%%%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%<br
+/><br
+/>batch_analysis<br
+/><br
+/>When we do defensive programming, we want to try to catch errors before they happen. For instance, you might want to only process samples that have at least 60 lines in the file. You can use something called an assert statement to ensure that the data is long enough.&nbsp;<br
+/><br
+/>%%%%%%%%%%%%%%%% Challenge script %%%%%%%%%%%%%%%%%%<br
+/>function [] = run_analysis(filename)<br
+/>&nbsp;&nbsp;&nbsp; disp(['running...', filename])<br
+/>&nbsp;&nbsp;&nbsp; patient_data = csvread(filename);<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; assert(size(patient_data, 1) == 60, 'Files must have 60 rows!')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; pause(2)<br
+/>&nbsp;&nbsp;&nbsp; close()<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; ave_inflammation = mean(patient_data, 1);<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,1)<br
+/>&nbsp;&nbsp;&nbsp; plot(ave_inflammation)<br
+/>&nbsp;&nbsp;&nbsp; ylabel('average')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,2)<br
+/>&nbsp;&nbsp;&nbsp; plot(max(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('max')<br
+/><br
+/>&nbsp;&nbsp;&nbsp; subplot(1,3,3)<br
+/>&nbsp;&nbsp;&nbsp; plot(min(patient_data, [], 1));<br
+/>&nbsp;&nbsp;&nbsp; ylabel('min')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>end<br
+/>%%%%%%%%%%%%%%%% End of script %%%%%%%%%%%%%%%%%%%%<br
+/><br
+/><br
+/>Control-C will cancel any loop or process running in matlab. Useful when you accidentally start something that takes a long time to run.&nbsp;<br
+/><br
+/>What's the difference between "=" and "=="<br
+/>- "=" is used to assign to a variable<br
+/>- "==" is used to test of two variables or objects are the same/equal<br
+/><br
+/><br
+/><b>GIT</b><br
+/><br
+/>Lesson material: <a href="http://swcarpentry.github.io/git-novice/">http://swcarpentry.github.io/git-novice/</a><br
+/><br
+/>Open terminal, type git (tells you all the git options)<br
+/>&nbsp;&nbsp;&nbsp; on a Mac, if you get an Xcode error, install it:)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>Why use git?<br
+/>&nbsp;&nbsp;&nbsp; multiple version of the same file gets annoying!<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E.g., ... <a href="http://www.phdcomics.com/comics/archive.php?comicid=1531">http://www.phdcomics.com/comics/archive.php?comicid=1531</a><br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; version1.doc, version2.doc, final.doc, final24.doc<br
+/>&nbsp;&nbsp;&nbsp; is very good at managing files/versions through the cloud<br
+/>&nbsp;&nbsp;&nbsp; never lose ANYTHING...EVER!<br
+/>&nbsp;&nbsp;&nbsp; time travel (go back in time and see previous versions you presented at the World Conference 2013)<br
+/>&nbsp;&nbsp;&nbsp; detects when you might overwrite changes and will prompt you to reconcile changes<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>git config --global core.editor "nano -w"<br
+/>git config --global user.name "Your Name"<br
+/>git config --global user.email "your@email.com"<br
+/>git config --global color.ui "auto"<br
+/>git config --list<br
+/>&nbsp;&nbsp;&nbsp; shows you your configuration settings<br
+/><br
+/>Let's set up a git repository!<br
+/>cd (to go Home)<br
+/>mkdir planets<br
+/>cd planets<br
+/>git init<br
+/>&nbsp;&nbsp;&nbsp; this will initialize your repository<br
+/>&nbsp;&nbsp;&nbsp; should see message about git repository (aka "repo") being initialized<br
+/>ls -a<br
+/>&nbsp;&nbsp;&nbsp; lists all files/folders, even hidden ones (which have names that start with "." dot)<br
+/>&nbsp;&nbsp;&nbsp; should see .git (that's your hidden git repo folder, if you delete is your git repo/version history are gonezo)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>git status<br
+/>&nbsp;&nbsp;&nbsp; tells you what's happening in your git repo<br
+/>&nbsp;&nbsp;&nbsp; you're on branch master (we're staying on "master" for these lessons, so it should always say master today)<br
+/><br
+/>Problem: Is it a good idea to make a folder "mars" inside planets, and initialize mars as a git repo?<br
+/>&nbsp;&nbsp;&nbsp; pretty much always a bad idea to make repos within repos!<br
+/><br
+/>nano mars.txt<br
+/>type some notes in there about mars<br
+/>ctrl + o to save, enter to save as mars.txt<br
+/>ctrl + x to exit<br
+/>ls and you'll see your mars.txt file<br
+/>cat mars.txt<br
+/>&nbsp;&nbsp;&nbsp; shows contents of file<br
+/>git status<br
+/>&nbsp;&nbsp;&nbsp; you'll see your mars.txt file as an untracked file<br
+/>git add mars.txt<br
+/>&nbsp;&nbsp;&nbsp; adds mars so git will track it<br
+/>git commit -m "Starts notes on Mars as a base"<br
+/>&nbsp;&nbsp;&nbsp; you'll see a note about what you did, files changed<br
+/><br
+/>that was the git add - commit cycle: you update a file, put it in the "staging area" (with git add), and then commit (changes to whatever's in your staging area is committed)<br
+/>&nbsp;&nbsp;&nbsp; committing only what is in the staging area is helpful so you can commit only those changes you want; changes that you might not be done with can be staged/committed later<br
+/><br
+/>git status<br
+/>&nbsp;&nbsp;&nbsp; shows you status of repo (should be clean, you don't have any new changes to commit)<br
+/>git log<br
+/>&nbsp;&nbsp;&nbsp; shows log of your commits, commit messages, so you can see what/when/who committed<br
+/><br
+/>nano mars.txt<br
+/>&nbsp;&nbsp;&nbsp; add another line of text to edit the file<br
+/>&nbsp;&nbsp;&nbsp; ctrl + o, enter, ctrl + x (save, accept name, exit)<br
+/><br
+/>git status<br
+/>&nbsp;&nbsp;&nbsp; modified mars.txt that aren't staged for commit (we made changes, but haven't staged them for commit)<br
+/><br
+/>but before we commit, let's see what we changed in our file (e.g., maybe the changes we made messed up the file and we want to compare it to the old version)...<br
+/>git diff<br
+/>&nbsp;&nbsp;&nbsp; first line shows you "diff" (the command you ran) and the two files you're comparing<br
+/>&nbsp;&nbsp;&nbsp; - indicates deletions, + additions to the file<br
+/><br
+/>git commit -m "add concerns about effects of mars' moons on Wolfman"<br
+/>&nbsp;&nbsp;&nbsp; oops, something went wrong there, all we see is the git status again with mars.txt still unstaged, and message that "no changes added to commit"<br
+/>&nbsp;&nbsp;&nbsp; we forgot to git add!<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>git add mars.txt<br
+/>git commit -m "add concerns about effects of mars' moons on Wolfman"<br
+/>&nbsp;&nbsp;&nbsp; you'll see nice commit message, # files changed, # lines inserted<br
+/><br
+/>nano mars.txt<br
+/>&nbsp;&nbsp;&nbsp; add a third line of text<br
+/>&nbsp;&nbsp;&nbsp; save/exit<br
+/><br
+/>cat mars.txt<br
+/>git diff<br
+/>&nbsp;&nbsp;&nbsp; shows line added in green with +<br
+/><br
+/>git add mars.txt<br
+/>git diff<br
+/>&nbsp;&nbsp;&nbsp; didn't do anything because it's in the staging area (files have to be unstaged to be diffed; once files are staged git considers that staged version as the current version so there's nothing to diff it with)<br
+/>&nbsp;&nbsp;&nbsp; you can edit mars.txt again even though it hasn't been committed, and it will get thrown off the stage (i.e., will be unstaged)<br
+/>&nbsp;&nbsp;&nbsp; you can still diff a staged file, "git diff -staged"<br
+/><br
+/>git commit -m "Discuss concerns about mars' climate for Mummy"<br
+/>&nbsp;&nbsp;&nbsp; you'll see your nice commit message<br
+/>git status<br
+/>&nbsp;&nbsp;&nbsp; on master, nothing to commit, we're all caught up<br
+/><br
+/>git log<br
+/>&nbsp;&nbsp;&nbsp; we've made three commits, first/initial commit is at bottom, most recent commit at top<br
+/><br
+/>Problem: Committing changes to git: which would save changes to myfiles.txt to local git repo?<br
+/>&nbsp;&nbsp;&nbsp; $ git add myfile.txt<br
+/>&nbsp;&nbsp;&nbsp; $ git commit -m "my recent changes"<br
+/><br
+/>Problem: Make "bio" git repository<br
+/>&nbsp;&nbsp;&nbsp; cd ..<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get out of planets so we don't make a repository in a repository (and get stuck in a black hole)<br
+/>&nbsp;&nbsp;&nbsp; mkdir bio<br
+/>&nbsp;&nbsp;&nbsp; cd bio<br
+/>&nbsp;&nbsp;&nbsp; git init<br
+/>&nbsp;&nbsp;&nbsp; nano me.txt<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; write a three line bio<br
+/>&nbsp;&nbsp;&nbsp; git add me.txt<br
+/>&nbsp;&nbsp;&nbsp; git commit -m "edited my life"<br
+/>&nbsp;&nbsp;&nbsp; nano me.txt<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; modify one of the lines, and add a fourth line<br
+/>&nbsp;&nbsp;&nbsp; git diff<br
+/><br
+/>Let's go back to planets<br
+/>cd ../planets<br
+/>ls<br
+/>&nbsp;&nbsp;&nbsp; should see mars.txt<br
+/>git diff HEAD~1 mars.txt<br
+/>&nbsp;&nbsp;&nbsp; head = current commit, ~1 = go 1 commit back (from head), and compare mars.txt in that commit to current version<br
+/>git diff HEAD~2 mars.txt<br
+/>&nbsp;&nbsp;&nbsp; compare current mars.txt to mars.txt from 2 commits ago<br
+/>git log<br
+/>&nbsp;&nbsp;&nbsp; get commit id (long crazy string next to "commit") for the commit you want to compare to<br
+/>git diff fae08aekje83 mars.txt<br
+/>&nbsp;&nbsp;&nbsp; or whatever your crazy long string is:) (you usually only need to use the first 10ish characters of it, enough so you know it's going to uniquely identify the commit)<br
+/>nano mars.txt<br
+/>&nbsp;&nbsp;&nbsp; add line about needing to manufacture oxygen or whatever<br
+/>&nbsp;&nbsp;&nbsp; save/exit<br
+/>cat mars.txt<br
+/>OOPS, we didn't like that change, we want to go back to the last committed version...<br
+/>git checkout HEAD mars.txt<br
+/>&nbsp;&nbsp;&nbsp; head = last commit, and then specify which file you want to checkout from that commit<br
+/>&nbsp;&nbsp;&nbsp; the stuff we didn't want in mars.txt will be GONE FOREVER! because we didn't commit it<br
+/>&nbsp;&nbsp;&nbsp; you can replace HEAD with a commit ID or HEAD~3 (or any number of commits ago)<br
+/><br
+/>PROBLEM: Recovering older versions of a file...<br
+/>&nbsp;&nbsp;&nbsp; Which commands below will let Jennifer recover the last committed version of her Python script called data_cruncher.py? Answer is 5 (both 2 and 4)...<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ git checkout HEAD data_cruncher.py<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ git checkout &lt;unique ID of last commit&gt; data_cruncher.py<br
+/><br
+/>Let's ignore things we don't want to be version controlled by git (bit data files, non-text files, images, raw data, etc.); version controlling just SCRIPTS is common (results files can be reproduced from those scripts at any time). Here's how we ignore....<br
+/><br
+/>mkdir results<br
+/>touch a.dat b.dat c.dat results/a.out results/b.out<br
+/>ls results<br
+/>&nbsp;&nbsp;&nbsp; see a.out and b.out<br
+/>git status<br
+/>&nbsp;&nbsp;&nbsp; lots of new files, but we don't want to see those every time and we don't want to control them<br
+/>so let's make a git ignore file that lists the things we want git to ignore...<br
+/>nano .gitignore<br
+/>&nbsp;&nbsp;&nbsp; add these two lines, then save/exit...<br
+/>&nbsp;&nbsp;&nbsp; *.dat<br
+/>&nbsp;&nbsp;&nbsp; results/<br
+/>git status<br
+/>&nbsp;&nbsp;&nbsp; all those new files are gone, and we just see .gitignore<br
+/>&nbsp;&nbsp;&nbsp; it's up to you if you version control .gitignore; Emily chooses to do so, Brad does too (because I mess it up sometimes and want to go back to my previous versions:)<br
+/>git add .gitignore<br
+/>git commit -m "added git ignore file"<br
+/>git status<br
+/>git add a.dat<br
+/>&nbsp;&nbsp;&nbsp; note: you will get an error if you try to stage a file that you have in your git ignore file<br
+/>&nbsp;&nbsp;&nbsp; you can use "git add -f" to force staging that file, but you probably just want to remove it from your git ignore<br
+/><br
+/><b>GIT HUB</b><br
+/>sign up for an account at github.com<br
+/>pros: cloud based repositories, free<br
+/>cons: pretty much only allows public repositories<br
+/>alternatives: <a href="https://bitbucket.org/">https://bitbucket.org/</a><br
+/><br
+/>In web browser...<br
+/>&nbsp;&nbsp;&nbsp; log in to git, Click + in top right corner to create a new repository "planets"<br
+/>&nbsp;&nbsp;&nbsp; under quick setup, click "ssh" and copy LINK.git<br
+/><br
+/>Back in terminal window...let's connect our planets repo to the online github planets repo<br
+/>&nbsp;&nbsp;&nbsp; cd ~/planets<br
+/>&nbsp;&nbsp;&nbsp; git remote add origin LINK.git<br
+/><br
+/>Now let's "push" our repository to the github repository<br
+/>&nbsp;&nbsp;&nbsp; git push origin master<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; origin = what we're calling our github repository (pretty standard to just use that name, must match what you used when you added the remote link above)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; master = which branch you're on--we aren't doing any "branching" today, you're always on the master branch<br
+/><br
+/><b>Pair up with neighbor to share repository:</b><br
+/>Person A-- on github go to your planets repository page, settings link on right, and click collaborators<br
+/>&nbsp;&nbsp;&nbsp; add Person B's github username<br
+/><br
+/>Then Person B-- on your computer, go to your Desktop folder (or any folder other than where you have your own planets directory)<br
+/>&nbsp;&nbsp;&nbsp; on github, click search bar at the top and search for Person A's username, go to their planets repo, and in lower left panel copy the https link for cloning the repo<br
+/>&nbsp;&nbsp;&nbsp; back on your computer in the shell...<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git clone <a href="https://github.com/PersonA/planets">https://github.com/PersonA/planets</a> (or whatever their https link is)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ls<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you'll see you have a planets directory now<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cd planets<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let's make a new file...<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nano pluto.txt<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add some text to it, save/exit<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git add pluto.txt<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git commit -m "added notes on pluto"<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git push origin master<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this pushes your new files up to Person A's planets repository on github<br
+/><br
+/>Person A can now get those changes Person B made into A's planets directory on A's machine<br
+/>&nbsp;&nbsp;&nbsp; Person A, in their shell on their computer, from in their planets directory that they pushed up to github earlier...<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git pull origin master<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pulls down new commits that have been made to Person A's planets repo on github<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ls<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you should now see the new pluto.txt file<br
+/><br
+/>Now let's create a conflict...<br
+/>Person A<br
+/>&nbsp;&nbsp;&nbsp; make some edits to mars.txt<br
+/>&nbsp;&nbsp;&nbsp; git add mars.txt<br
+/>&nbsp;&nbsp;&nbsp; git commit -m "person A made some changes"<br
+/>&nbsp;&nbsp;&nbsp; git push origin master<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push those changes up to github<br
+/><br
+/>After that, Person B<br
+/>&nbsp;&nbsp;&nbsp; make some edits to mars.txt<br
+/>&nbsp;&nbsp;&nbsp; git add mars.txt<br
+/>&nbsp;&nbsp;&nbsp; git commit -m "person B made some OTHER changes!"<br
+/>&nbsp;&nbsp;&nbsp; git push origin master<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try to push those changes up to github<br
+/><br
+/>Rejected! Git knows--Person A made some edits that Person B didn't have in their repository; before trying to push to github, Person B needed to git pull to get latest version of github planets repository<br
+/><br
+/>Person B:<br
+/>&nbsp;&nbsp;&nbsp; git pull origin master<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; message about a conflict in mars.txt that you need to resolve, do it NOW!<br
+/>&nbsp;&nbsp;&nbsp; nano mars.txt<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now it looks kind of crazy, you see both Person A's version and Person B's version, and you can pick which you want (or delete both and type something totally new)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; save/exit<br
+/>&nbsp;&nbsp;&nbsp; git add mars.txt<br
+/>&nbsp;&nbsp;&nbsp; git commit -m "resolved merge conflict"<br
+/>&nbsp;&nbsp;&nbsp; git push origin master<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now it should push just fine; git defers to you, the human, when you've resolved a conflict--that means you can mess it up, and that the person who pushes changes to a repository first has no problem, and the person who gets there second has to deal with the conflict:)<br
+/><br
+/><br
+/><br
+/><b>SHELL SCRIPTS:</b><br
+/><a href="http://swcarpentry.github.io/shell-novice/05-script.html">http://swcarpentry.github.io/shell-novice/05-script.html</a><br
+/><br
+/>cd<br
+/>cd Desktop/shell-novice/data/users/nelle/molecules/<br
+/>ls<br
+/>&nbsp;&nbsp;&nbsp; see cubane.pdb, ethane.pdb, etc. files<br
+/><br
+/>Script to take lines 10-15 of file...<br
+/>head -15 octane.pdb | tail -5<br
+/>nano middle.sh<br
+/>&nbsp;&nbsp;&nbsp; type "head-15 octane.pdb | tail -5" in there, save/exit<br
+/>bash middle.sh<br
+/>&nbsp;&nbsp;&nbsp; see same output as just typing those commands in terminal<br
+/>nano middle.sh<br
+/>&nbsp;&nbsp;&nbsp; replace octane.pdb with "$1" (include quotes! necessary when there are spaces in filenames--which you should avoid at all costs :)...<br
+/>&nbsp;&nbsp;&nbsp; head -15 "$1" | tail -5<br
+/>bash middle.sh octane.pdb<br
+/>&nbsp;&nbsp;&nbsp; same output again:)<br
+/>bash middle.sh cubane.pdb<br
+/>&nbsp;&nbsp;&nbsp; now you see lines 10-15 of cubane.pdb<br
+/>nano middle.sh<br
+/>&nbsp;&nbsp;&nbsp; head "$2" "$1" | tail "$3"<br
+/>bash middle.sh octane.pdb -10 -3<br
+/><br
+/>Future you: Will be very confused about what the heck this script was for, so let's add comments to the beginning of the script to let future us know what this thing did...<br
+/>&nbsp;&nbsp;&nbsp; # Select lines from the middle of a file<br
+/>&nbsp;&nbsp;&nbsp; # Usage: middle.sh filename -end_line -num_lines<br
+/><br
+/>nano sorted.sh<br
+/>&nbsp;&nbsp;&nbsp; wc -l "$@" | sort -n<br
+/>&nbsp;&nbsp;&nbsp; save/exit; note--the $@ will take as many parameters as you want (whereas $1 or $2 can hold only a single parameter)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>bash sorted.sh *.pdb ../creatures/*.dat<br
+/>&nbsp;&nbsp;&nbsp; we're passing lots of files to the sorted.sh script! (all files matching *.pdb, and all files in the creatures directory matching *.dat)<br
+/><br
+/>nano sorted.sh<br
+/>&nbsp;&nbsp;&nbsp; add some comments for future you!<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #list files sorted by number of lines<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #usage: sorted.sh filelist<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #note: file list can contain any number of files to sort by number of lines<br
+/><br
+/>history | tail -4 &gt; redo-figure-3.sh<br
+/>&nbsp;&nbsp;&nbsp; this grabs your most recent 4 commands and dumps them into the redo-figure-3.sh file, which you can go into in a text editor and modify as desired to create a script based on&nbsp;<br
+/><br
+/><br
+/><br
+/><br
+/><br
+/><br
+/><br
+/></body>
+</html>
